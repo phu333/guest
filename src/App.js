@@ -17,18 +17,18 @@ class App extends React.Component {
 
         <Online>
 
-          <Router>
+          
 
-            <Router>
+            <Router basename={process.env.PUBLIC_URL}>
 
-              <Route exact path="/guest/Search" component={SearchContractByCode} />
-              <Route exact path="/guest/Contract/:id" component={ContractForGuest} />
+              <Route exact path="/Search" component={SearchContractByCode} />
+              <Route exact path="/Contract/:id" component={ContractForGuest} />
 
 
             </Router>
 
             {/* {information} */}
-          </Router>
+         
         </Online>
         <Offline><Result
           status="404"
