@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 import 'antd/dist/antd.css'
-import { Search } from "./SearchContract";
+import  SearchContractByCode  from "./SearchContract";
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { Result, Button } from 'antd';
 import ContractForGuest from './ContractForGuest'
@@ -21,7 +21,7 @@ class App extends React.Component {
 
             <Router>
 
-              <Route exact path="/guest/Search" component={Search} />
+              <Route exact path="/guest/Search" component={SearchContractByCode} />
               <Route exact path="/guest/Contract/:id" component={ContractForGuest} />
 
 
