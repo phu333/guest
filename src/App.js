@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import 'antd/dist/antd.css'
 import  SearchContractByCode  from "./SearchContract";
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { Result, Button } from 'antd';
 import ContractForGuest from './ContractForGuest'
 import { Offline, Online } from "react-detect-offline";
@@ -19,7 +19,7 @@ class App extends React.Component {
 
           
 
-            <Router basename={process.env.PUBLIC_URL}>
+            <Router basename='/'>
 
               <Route exact path="/Search" component={SearchContractByCode} />
               <Route exact path="/Contract/:id" component={ContractForGuest} />
